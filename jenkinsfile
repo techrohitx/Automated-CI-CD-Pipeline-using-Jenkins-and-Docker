@@ -2,8 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-          stages {
         stage('pull') {
             steps {
                 git branch: 'master', url: 'https://github.com/techrohitx/Automated-CI-CD-Pipeline-using-Jenkins-and-Docker.git'
