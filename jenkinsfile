@@ -3,11 +3,14 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
+          stages {
+        stage('pull') {
             steps {
-                git 'https://github.com/techrohitx/Automated-CI-CD-Pipeline-using-Jenkins-and-Docker.git'
+                git branch: 'master', url: 'https://github.com/techrohitx/Automated-CI-CD-Pipeline-using-Jenkins-and-Docker.git'
             }
         }
+
+    
 
         stage('Build Docker Image') {
             steps {
