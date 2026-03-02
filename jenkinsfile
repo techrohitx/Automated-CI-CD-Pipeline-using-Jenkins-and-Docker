@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/techrohitx/Automated-CI-CD-Pipeline-using-Jenkins-and-Docker.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t devops-app .'
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                sh 'docker rm -f devops-container || true'
+                sh 'docker run -d -p 3000:3000 --name devops-container devops-app'
+            }
+        }
+    }
+}
