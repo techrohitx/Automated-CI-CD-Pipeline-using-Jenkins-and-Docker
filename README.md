@@ -19,8 +19,9 @@ Jenkins Pipeline (Running on EC2 Ubuntu)
 Docker Build  
         ↓  
 Container Deployment  
+---
 
-![CI/CD Architecture](architecture-diagram.png)
+![CI/CD Architecture](img/arc-dig.png)
 
 ---
 
@@ -32,7 +33,7 @@ Container Deployment
 
     3. Configure:
 
-###  **Name:-** NodeJS-CICD-Server
+###  **Name:-** Jenkins
 
 ### **AMI:-** Ubuntu Server 22.04 LTS
 
