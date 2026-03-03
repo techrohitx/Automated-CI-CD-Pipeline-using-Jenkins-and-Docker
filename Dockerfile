@@ -1,5 +1,5 @@
 FROM node:18
-WORKDIR /app
+WORKDIR /var/lib/jenkins/workspace
 COPY package*.json ./
 RUN npm install
 EXPOSE 3000
