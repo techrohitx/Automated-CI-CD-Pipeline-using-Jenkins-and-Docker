@@ -1,5 +1,5 @@
 FROM node:18
-WORKDIR /app
+WORKDIR /nodeapp
 COPY package*.json ./
 RUN npm install
 EXPOSE 3000
